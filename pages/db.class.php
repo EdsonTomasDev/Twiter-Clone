@@ -6,7 +6,7 @@ class db{
     private $host = '127.0.0.1';
 
     //usuario
-    private $usuario = 'tom'
+    private $usuario = 'tom';
 
     //senha
     private $senha = '1234$*';
