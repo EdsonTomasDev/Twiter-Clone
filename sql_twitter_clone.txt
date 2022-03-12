@@ -1,1 +1,10 @@
 CREATE DATABASE twitter_clone
+
+CREATE TABLE usuarios(
+    id int not null AUTO_INCREMENT PRIMARY KEY,
+    usuario varchar(50) not null,
+    email varchar(100) not null,
+    senha varchar(32) not null)
+
+INSERT INTO usuarios(usuario,email,senha) VALUES ('tomas', 'tomas@hotmail.com', '123')
+
