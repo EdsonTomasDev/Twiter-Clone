@@ -1,3 +1,12 @@
+<?php
+	//IF TERNÁRIO, SE FOR VERDADEIRO, EXECUTA O QUE ESTIVER A ESQUERDA DOS : SE FALSO EXECUTA A DIREITA
+	$erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
+
+	
+		echo $erro;
+	
+?>
+
 <!DOCTYPE HTML>
 <html lang="pt-br">
 	<head>
