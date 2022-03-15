@@ -21,7 +21,7 @@
 
     //VERIFICAR SE EXISTE RESULTADOS NA CONSULTA AO BANCO DE DADOS
     if(isset($dados_usuario['usuario'])){
-        echo '<br>conexão realizada com sucesso, usuário encontrado!';
+        header('Location: ../home.php');
 
     }else{
         //SE NÃO EXISTIR O USUÁRIO, ENTÃO HÁ O REDIRECIONAMENTO PARA A PÁGINA INDEX.PHP COM UM PARÂMETRO DE ERRO
