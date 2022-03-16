@@ -5,7 +5,7 @@ require_once 'db.class.php';
 
 $usuario = $_POST['usuario'];
 $email = $_POST['email'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);//CRIPTOGRAFIA DA SENHA EM 32 CARACTERES
 
 echo $email;
 
