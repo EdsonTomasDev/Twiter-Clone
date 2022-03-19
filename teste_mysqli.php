@@ -18,17 +18,29 @@
    
 
    if($consulta){
-    $dados_usuario = mysqli_fetch_array($consulta, MYSQLI_ASSOC);
+    // $dados_usuario = mysqli_fetch_array($consulta, MYSQLI_ASSOC);
    
-    $dados_usuario2 = mysqli_fetch_array($consulta, MYSQLI_NUM);
+    // $dados_usuario2 = mysqli_fetch_array($consulta, MYSQLI_NUM);
 
-    $dados_usuario3 = mysqli_fetch_array($consulta, MYSQLI_BOTH);
+    // $dados_usuario3 = mysqli_fetch_array($consulta, MYSQLI_BOTH);
+
+    $dados_usuario4 = array();
+
+    while($linha= mysqli_fetch_array($consulta, MYSQLI_ASSOC)){
+        $dados_usuario4[] = $linha;
+       
+    }
+
+    foreach($dados_usuario4 as $usuario){
+        echo $usuario['email'];
+        echo '<br>';
+    }
       
-    var_dump($dados_usuario);
-    echo'<br>';
-    var_dump($dados_usuario2);
-    echo'<br>';
-    var_dump($dados_usuario3);
+    // var_dump($dados_usuario);
+    // echo'<br>';
+    // var_dump($dados_usuario2);
+    // echo'<br>';
+    // var_dump($dados_usuario3);
 
     
     }else{
