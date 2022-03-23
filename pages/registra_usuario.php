@@ -11,15 +11,18 @@ $conecta_db = new db();
 
 $link = $conecta_db->conecta_mysql();
 
+$usuario_existe = false;
+$email_existe = false;
+
+
 //VERIFICAR SE O USUARIO JÁ EXISTE
 $sql = "SELECT * FROM `usuarios` WHERE usuario = '$usuario'";
 if($consulta_usuario = mysqli_query($link, $sql)){
 
    $dados_usuario = mysqli_fetch_array($consulta_usuario);
    if(isset($dados_usuario['usuario'])){
-       echo 'Usuário já cadastrado!';
-   }else{
-       echo 'Usuário não cadastrado, pode cadastrar!';
+
+        $usuario_existe = true;
    }
 
 
@@ -33,9 +36,7 @@ if($consulta_usuario = mysqli_query($link, $sql)){
 
    $dados_usuario = mysqli_fetch_array($consulta_usuario);
    if(isset($dados_usuario['email'])){
-       echo 'E-mail já cadastrado para outro usuário, favor utilizar outro e-mail!';
-   }else{
-       echo 'E-mail não cadastrado, pode cadastrar!';
+    $email_existe = false;
    }
 
    //var_dump($dados_usuario);
@@ -44,7 +45,10 @@ if($consulta_usuario = mysqli_query($link, $sql)){
     echo 'Erro ao tentar verificar o registro de e-mail!';
 }
 
-//echo $email;
+//SE USUÁRIO OU E-MAIL EXISTE
+if($usuario_existe || $email_existe){
+    header('Location: ../inscrevase.php');
+}
 
 die();
 
