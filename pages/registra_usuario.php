@@ -36,7 +36,8 @@ if($consulta_usuario = mysqli_query($link, $sql)){
 
    $dados_usuario = mysqli_fetch_array($consulta_usuario);
    if(isset($dados_usuario['email'])){
-    $email_existe = false;
+    $email_existe = true;
+    //echo $dados_usuario['email'];
    }
 
    //var_dump($dados_usuario);
@@ -47,7 +48,20 @@ if($consulta_usuario = mysqli_query($link, $sql)){
 
 //SE USUÁRIO OU E-MAIL EXISTE
 if($usuario_existe || $email_existe){
-    header('Location: ../inscrevase.php');
+
+    //VARIÁVEL ARMAZENA ERRO
+    $retorno_get = '';
+
+    if($usuario_existe){
+        $retorno_get.= "erro_usuario=1&";
+    }
+
+    if($email_existe){
+        $retorno_get.= "erro_email=1&";
+    }
+
+
+    header('Location: ../inscrevase.php?'.$retorno_get);
 }
 
 die();
