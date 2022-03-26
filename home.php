@@ -73,7 +73,7 @@
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
 								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Tweets</button>
+									<button class="btn btn-default" type="button">Teets</button>
 								</span>
 							</div>
 
@@ -81,7 +81,13 @@
 
 				</div>
 			</div>
-			<div class="col-md-3"></div>
+			<div class="col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h4><a href="#">Procurar por Pessoas</a></h4>
+					</div>
+				</div>
+			</div>
 
 			
 
