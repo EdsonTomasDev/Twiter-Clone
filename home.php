@@ -18,6 +18,24 @@
 
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<script>
+
+		$(document).ready(function(){
+			//ASSOCIAR O EVENTO DE CLICK
+			$('#btn_tweet').click(function(){
+				
+				if($('#texto_tweet').val().length > 0){
+					alert('Campo preenchido com sucesso!');
+				}
+
+			});
+
+
+
+		});
+
+	</script>
 	
 	</head>
 
@@ -71,9 +89,9 @@
 				<div class="panel panel-default">
 						<div class="panel-body">
 							<div class="input-group">
-								<input type="text" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
+								<input type="text" id="texto_tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
 								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Teets</button>
+									<button class="btn btn-default" id="btn_tweet" type="button">Teets</button>
 								</span>
 							</div>
 
