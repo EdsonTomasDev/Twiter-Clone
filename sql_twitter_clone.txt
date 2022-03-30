@@ -8,3 +8,11 @@ CREATE TABLE usuarios(
 
 INSERT INTO usuarios(usuario,email,senha) VALUES ('tomas', 'tomas@hotmail.com', '123')
 
+CREATE TABLE tweet(
+    id_tweet int not null AUTO_INCREMENT PRIMARY KEY,
+    id_usuario int not null,
+    tweet varchar(140) not null,
+    data_inclusao datetime DEFAULT CURRENT_TIMESTAMP
+
+)
+

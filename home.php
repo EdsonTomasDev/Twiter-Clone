@@ -26,7 +26,13 @@
 			$('#btn_tweet').click(function(){
 				
 				if($('#texto_tweet').val().length > 0){
-					alert('Campo preenchido com sucesso!');
+					
+					$.ajax({
+						url: 'pages/inclui_tweet.php',
+						success: function(data){
+							alert(data);
+						}
+					});
 				}
 
 			});
