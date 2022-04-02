@@ -29,6 +29,9 @@
 					
 					$.ajax({
 						url: 'pages/inclui_tweet.php',
+						method: 'post',
+						//data: {texto_tweet: $('#texto_tweet').val()},
+						data: $('#form_tweet').serialize(),
 						success: function(data){
 							alert(data);
 						}
@@ -94,12 +97,12 @@
 	    	<div class="col-md-6">
 				<div class="panel panel-default">
 						<div class="panel-body">
-							<div class="input-group">
-								<input type="text" id="texto_tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
+							<form id="form_tweet" class="input-group">
+								<input type="text" id="texto_tweet" name="texto_tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
 								<span class="input-group-btn">
 									<button class="btn btn-default" id="btn_tweet" type="button">Teets</button>
 								</span>
-							</div>
+							</form>
 
 						</div>
 

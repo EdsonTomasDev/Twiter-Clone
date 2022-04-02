@@ -1,3 +1,5 @@
 <?php
-    echo " O script está funcionando!";
+
+    $texto_tweet = $_POST['texto_tweet'];
+    echo $texto_tweet;
 ?>
