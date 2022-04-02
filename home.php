@@ -33,6 +33,8 @@
 						//data: {texto_tweet: $('#texto_tweet').val()},
 						data: $('#form_tweet').serialize(),
 						success: function(data){
+							//LIMPA A INPUT TWEET DEPOIS DE INSERIR DADOS NO BANCO
+							$('#texto_tweet').val('');
 							alert(data);
 						}
 					});
