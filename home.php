@@ -35,7 +35,7 @@
 						success: function(data){
 							//LIMPA A INPUT TWEET DEPOIS DE INSERIR DADOS NO BANCO
 							$('#texto_tweet').val('');
-							alert(data);
+							atualizaTweet();
 						}
 					});
 				}
@@ -47,7 +47,8 @@
 				$.ajax({
 					url: 'pages/get_tweet.php',
 					success: function(data){
-						alert(data);
+						$('#tweets').html(data);
+						
 
 					}
 
@@ -124,7 +125,7 @@
 						</div>
 
 						<div id="tweets" class="list-group">
-							
+
 						</div>
 
 				</div>
