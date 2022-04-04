@@ -42,6 +42,21 @@
 
 			});
 
+			function atualizaTweet(){
+
+				$.ajax({
+					url: 'pages/get_tweet.php',
+					success: function(data){
+						alert(data);
+
+					}
+
+				});
+
+			}
+
+			atualizaTweet();
+
 
 
 		});
@@ -106,6 +121,10 @@
 								</span>
 							</form>
 
+						</div>
+
+						<div id="tweets" class="list-group">
+							
 						</div>
 
 				</div>
