@@ -28,7 +28,7 @@
 				if($('#texto_tweet').val().length > 0){
 					
 					$.ajax({
-						url: 'pages/inclui_tweet.php',
+						url: 'inclui_tweet.php',
 						method: 'post',
 						//data: {texto_tweet: $('#texto_tweet').val()},
 						data: $('#form_tweet').serialize(),
@@ -45,7 +45,7 @@
 			function atualizaTweet(){
 
 				$.ajax({
-					url: 'pages/get_tweet.php',
+					url: 'get_tweet.php',
 					success: function(data){
 						$('#tweets').html(data);
 						
@@ -78,11 +78,12 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <img src="imagens/icone_twitter.png" />
+	          <img src="../imagens/icone_twitter.png" />
 	        </div>
 	        
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
+              <li><a href='../home.php'>Home</a></li>
 	            <li><a href='pages/sair.php'>Sair</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
@@ -133,7 +134,7 @@
 			<div class="col-md-3">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<h4><a href="pages/procurar_pessoas.php">Procurar por Pessoas</a></h4>
+						
 					</div>
 				</div>
 			</div>
