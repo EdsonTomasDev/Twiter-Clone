@@ -23,40 +23,26 @@
 
 		$(document).ready(function(){
 			//ASSOCIAR O EVENTO DE CLICK
-			$('#btn_tweet').click(function(){
+			$('#btn_procurar_pessoa').click(function(){
 				
-				if($('#texto_tweet').val().length > 0){
+				if($('#nome_pessoa').val().length > 0){
 					
 					$.ajax({
-						url: 'inclui_tweet.php',
+						url: 'get_pessoas.php',
 						method: 'post',
 						//data: {texto_tweet: $('#texto_tweet').val()},
-						data: $('#form_tweet').serialize(),
+						data: $('#form_procurar_pessoa').serialize(),
 						success: function(data){
 							//LIMPA A INPUT TWEET DEPOIS DE INSERIR DADOS NO BANCO
-							$('#texto_tweet').val('');
-							atualizaTweet();
+							// $('#texto_tweet').val('');
+							alert(data);
 						}
 					});
 				}
 
 			});
 
-			function atualizaTweet(){
-
-				$.ajax({
-					url: 'get_tweet.php',
-					success: function(data){
-						$('#tweets').html(data);
-						
-
-					}
-
-				});
-
-			}
-
-			atualizaTweet();
+		
 
 
 
@@ -84,7 +70,7 @@
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
               <li><a href='../home.php'>Home</a></li>
-	            <li><a href='pages/sair.php'>Sair</a></li>
+	            <li><a href='sair.php'>Sair</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -116,10 +102,10 @@
 	    	<div class="col-md-6">
 				<div class="panel panel-default">
 						<div class="panel-body">
-							<form id="form_tweet" class="input-group">
-								<input type="text" id="texto_tweet" name="texto_tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
+							<form id="form_procurar_pessoa" class="input-group">
+								<input type="text" id="nome_pessoa" name="nome_pessoa" class="form-control" placeholder="Quem você está procurando?" maxlength="140">
 								<span class="input-group-btn">
-									<button class="btn btn-default" id="btn_tweet" type="button">Teets</button>
+									<button class="btn btn-default" id="btn_procurar_pessoa" type="button">Procurar</button>
 								</span>
 							</form>
 
