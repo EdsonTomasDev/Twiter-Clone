@@ -33,9 +33,10 @@
 						//data: {texto_tweet: $('#texto_tweet').val()},
 						data: $('#form_procurar_pessoa').serialize(),
 						success: function(data){
+							$('#pessoas').html(data);
 							//LIMPA A INPUT TWEET DEPOIS DE INSERIR DADOS NO BANCO
 							// $('#texto_tweet').val('');
-							alert(data);
+							//alert(data);
 						}
 					});
 				}
@@ -111,7 +112,7 @@
 
 						</div>
 
-						<div id="tweets" class="list-group">
+						<div id="pessoas" class="list-group">
 
 						</div>
 

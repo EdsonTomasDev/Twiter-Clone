@@ -16,24 +16,24 @@
 
           $nome_pessoa = $_POST['nome_pessoa'];
 
-          echo $nome_pessoa;
+          //echo $nome_pessoa;
 
-          $sql = "SELECT * from usuarios where usuario= '$nome_pessoa'";
+          $sql = "SELECT * from usuarios where usuario like '%$nome_pessoa%' AND id <> $id_usuario ";
 
-          $resultado = mysqli_query($conexao,$sql);
+          $consulta = mysqli_query($conexao,$sql);
 
-          if($resultado){
+          if($consulta){
 
             while($registro = mysqli_fetch_array($consulta, MYSQLI_ASSOC)){
                 echo '<a href="#" class="list-group-item">';
                 
-                echo '<strong>Nome</strong> <small> - e-mail </small>';
+                echo '<strong>'.$registro['usuario'].'</strong> <small> - '.$registro['email'].' </small>';
     
                 echo '</a>';
                 
             }
 
-                j
+                
 
 
 
