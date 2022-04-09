@@ -41,11 +41,24 @@
 											method: 'post',
 											data: {seguir_id_usuario: id_usuario},
 											success: function(data){
-												alert('Requisição feita com sucesso!');
+												alert('Registro efetuado com sucesso!');
 											}
 
 										});
 
+								});
+
+								$('.btn_deixar_seguir').click(function(){
+									let id_usuario = $(this).data('id_usuario');
+										$.ajax({
+											url: 'deixar_seguir.php',
+											method: 'post',
+											data: {deixar_seguir_id_usuario: id_usuario},
+											success: function(data){
+												alert('Registro removido com sucesso!');
+											}
+
+										});
 								});
 
 
