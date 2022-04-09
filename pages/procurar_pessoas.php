@@ -34,9 +34,13 @@
 						data: $('#form_procurar_pessoa').serialize(),
 						success: function(data){
 							$('#pessoas').html(data);
-							//LIMPA A INPUT TWEET DEPOIS DE INSERIR DADOS NO BANCO
-							// $('#texto_tweet').val('');
-							//alert(data);
+								$('.btn_seguir').click(function(){
+									let id_usuario = $(this).data('id_usuario');
+									alert('O id do usuario a ser seguido é: '+ id_usuario);
+
+								});
+
+
 						}
 					});
 				}

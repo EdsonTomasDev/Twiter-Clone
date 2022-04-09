@@ -16,3 +16,9 @@ CREATE TABLE tweet(
 
 )
 
+CREATE TABLE usuarios_seguidores (
+    	id_usuario_seguidor int not null AUTO_INCREMENT PRIMARY KEY,
+	id_usuario int not null,
+	seguindo_id_usuario int not null,
+	data_registro datetime DEFAULT CURRENT_TIMESTAMP)
+
