@@ -71,7 +71,7 @@ $sql = "INSERT INTO usuarios(usuario,email,senha) VALUES ('$usuario', '$email', 
 
 //Executar a query
 if(mysqli_query($link,$sql)){
-    echo 'Usuário cadastrado com sucesso!';
+    header('Location: ../index.php');
 }else{
     echo 'Erro ao tentar cadastrar usuário';
 }
