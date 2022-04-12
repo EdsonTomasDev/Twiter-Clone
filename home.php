@@ -4,6 +4,19 @@
     if(!isset($_SESSION['usuario'])){
         header('Location: index.php?erro=1');
     }
+
+	$id_usuario = $_SESSION['id_usuario'];
+
+	require_once 'pages/db.class.php';
+         
+      
+	$classe = new db();
+
+	
+	$qtd_tweets = $classe->atualizar_tweets($id_usuario);
+	$qtd_seguidores = $classe->atualizar_seguidores($id_usuario);
+
+	
 ?>
 
 <!DOCTYPE HTML>
@@ -101,10 +114,10 @@
 
 
 						<div class="col-md-6">
-							TWEETS <br/> 1
+							TWEETS <br/> <?=  $qtd_tweets ?>
 						</div>
 						<div class="col-md-6">
-							SEGUIDORES <br/> 1
+							SEGUIDORES <br/> <?php echo $qtd_seguidores ?>
 						</div>
 
 					</div>
