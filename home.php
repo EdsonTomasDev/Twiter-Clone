@@ -49,6 +49,7 @@
 							//LIMPA A INPUT TWEET DEPOIS DE INSERIR DADOS NO BANCO
 							$('#texto_tweet').val('');
 							atualizaTweet();
+							atualiza_qtde_tweets()
 						}
 					});
 				}
@@ -61,6 +62,20 @@
 					url: 'pages/get_tweet.php',
 					success: function(data){
 						$('#tweets').html(data);
+						
+
+					}
+
+				});
+
+			}
+
+				function atualiza_qtde_tweets(){
+
+				$.ajax({
+					url: 'pages/atualiza_qtde_tweets.php',
+					success: function(data){
+						$('#qtd_tweets').html(data);
 						
 
 					}
@@ -114,10 +129,10 @@
 
 
 						<div class="col-md-6">
-							TWEETS <br/> <?=  $qtd_tweets ?>
+							TWEETS <br/> <p id="qtd_tweets"> <?=  $qtd_tweets ?> </p>
 						</div>
 						<div class="col-md-6">
-							SEGUIDORES <br/> <?php echo $qtd_seguidores ?>
+							SEGUIDORES <br/> <p id="qtd_seguidores"><?php echo $qtd_seguidores ?></p>
 						</div>
 
 					</div>
