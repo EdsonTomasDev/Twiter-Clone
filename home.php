@@ -49,7 +49,8 @@
 							//LIMPA A INPUT TWEET DEPOIS DE INSERIR DADOS NO BANCO
 							$('#texto_tweet').val('');
 							atualizaTweet();
-							atualiza_qtde_tweets()
+							atualiza_qtde_tweets();
+							
 						}
 					});
 				}
@@ -77,12 +78,12 @@
 					success: function(data){
 						$('#qtd_tweets').html(data);
 						
-
 					}
 
 				});
 
-			}
+				}
+				
 
 			atualizaTweet();
 
@@ -129,10 +130,10 @@
 
 
 						<div class="col-md-6">
-							TWEETS <br/> <p id="qtd_tweets"> <?=  $qtd_tweets ?> </p>
+							TWEETS <br/> <p id="qtd_tweets"> <?=  $qtd_tweets ?></p>
 						</div>
 						<div class="col-md-6">
-							SEGUIDORES <br/> <p id="qtd_seguidores"><?php echo $qtd_seguidores ?></p>
+							SEGUIDORES <br/> <?php echo $qtd_seguidores ?>
 						</div>
 
 					</div>
