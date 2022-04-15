@@ -16,17 +16,17 @@ class db{
 
     ///////////////////////////////////////////////////////////////////////////////////////////
 
-      //host
-      private $host = 'us-cdbr-east-05.cleardb.net';
+  //host
+  private $host = 'us-cdbr-east-05.cleardb.net';
 
-      //usuario
-      private $usuario = 'bc51b94059f694';
-  
-      //senha
-      private $senha = '40572bf0';
-  
-      //banco de dados
-      private $database = 'heroku_daaefe1c8dc11ae';
+  //usuario
+  private $usuario = 'b4b5deb1ebc7be';
+
+  //senha
+  private $senha = '1e303737';
+
+  //banco de dados
+  private $database = 'heroku_ff5825a4f6f87dd';
 
     public function conecta_mysql(){
 

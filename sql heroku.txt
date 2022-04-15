@@ -1,8 +1,18 @@
-1-https://alexandrerosseto.medium.com/heroku-configurar-e-provisionar-java-mysql-976b73d22ac0
+https://alexandrerosseto.medium.com/heroku-configurar-e-provisionar-java-mysql-976b73d22ac0
 
+1-Acessar o HEROKU e ou Criar conta se não tiver;
 
+2-Criar um app;
 
-2-Associe o repositório local com a Heroku: heroku git:remote -a clone-twitter-tera
+3-Adicionar o Mysql;
+
+4-Instalar Heroku CLI;
+
+5-Abrir o Terminal(CMD) e fazer login no Heroku: heroku login
+
+6-Exportar o banco de dados Mysql ou Criar as Tabelas;
+
+7-Associe o repositório local com a Heroku dentro do termimal do seu projeto: heroku git:remote -a clone-twitter-tera
 
 3-Verificar se deu certo: git remote -v
 
@@ -21,4 +31,8 @@ host --> us-cdbr-east-05.cleardb.net
 banco-dados --> heroku_daaefe1c8dc11ae
 
 5-dbeaver --> https://dbeaver.io/
+
+
+
+https://clone-twitter-tera.herokuapp.com/home.php
 
