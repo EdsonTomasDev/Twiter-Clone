@@ -1,0 +1,24 @@
+1-https://alexandrerosseto.medium.com/heroku-configurar-e-provisionar-java-mysql-976b73d22ac0
+
+
+
+2-Associe o repositório local com a Heroku: heroku git:remote -a clone-twitter-tera
+
+3-Verificar se deu certo: git remote -v
+
+4-Obtenha a URL do Banco de Dados da Heroku: heroku config | grep CLEARDB_DATABASE_URL
+
+
+
+mysqldump -u user -p dbname > arquivo.sql
+
+user --> bc51b94059f694
+
+password --> 40572bf0
+
+host --> us-cdbr-east-05.cleardb.net
+
+banco-dados --> heroku_daaefe1c8dc11ae
+
+5-dbeaver --> https://dbeaver.io/
+

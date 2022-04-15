@@ -12,9 +12,7 @@ CREATE TABLE tweet(
     id_tweet int not null AUTO_INCREMENT PRIMARY KEY,
     id_usuario int not null,
     tweet varchar(140) not null,
-    data_inclusao datetime DEFAULT CURRENT_TIMESTAMP
-
-)
+    data_inclusao datetime DEFAULT CURRENT_TIMESTAMP)
 
 CREATE TABLE usuarios_seguidores (
     	id_usuario_seguidor int not null AUTO_INCREMENT PRIMARY KEY,

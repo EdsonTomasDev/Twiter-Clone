@@ -2,17 +2,31 @@
 
 class db{
 
-    //host
-    private $host = '127.0.0.1';
+    // //host
+    // private $host = '127.0.0.1';
 
-    //usuario
-    private $usuario = 'tom';
+    // //usuario
+    // private $usuario = 'tom';
 
-    //senha
-    private $senha = '1234$*';
+    // //senha
+    // private $senha = '1234$*';
 
-    //banco de dados
-    private $database = 'twitter_clone';
+    // //banco de dados
+    // private $database = 'twitter_clone';
+
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+      //host
+      private $host = 'us-cdbr-east-05.cleardb.net';
+
+      //usuario
+      private $usuario = 'bc51b94059f694';
+  
+      //senha
+      private $senha = '40572bf0';
+  
+      //banco de dados
+      private $database = 'heroku_daaefe1c8dc11ae';
 
     public function conecta_mysql(){
 
